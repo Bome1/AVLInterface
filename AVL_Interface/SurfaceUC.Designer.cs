@@ -609,7 +609,7 @@
             this.tipOpenAirButton.Image = ((System.Drawing.Image)(resources.GetObject("tipOpenAirButton.Image")));
             this.tipOpenAirButton.SmallImage = ((System.Drawing.Image)(resources.GetObject("tipOpenAirButton.SmallImage")));
             this.tipOpenAirButton.Text = "Select File";
-            this.tipOpenAirButton.Click += new System.EventHandler(this.tipOpenAirButton_Click);
+            this.tipOpenAirButton.Click += new System.EventHandler(this.tipselectAfoilButton_Click);
             // 
             // tipAirfoilFileLabel
             // 

@@ -783,13 +783,14 @@ namespace AVL_Interface
                 if (!ofd.CheckFileExists)
                     return;
 
-                m_surf.Sections[m_currentSection].AirfoilFile = ofd.SafeFileName; 
+                m_surf.Sections[m_currentSection].AirfoilFile = ofd.SafeFileName;
+                m_surf.Sections[m_currentSection].UseAirfoilFile = true;
                 rootAirfoilFileLabel.Text = ofd.SafeFileName;
                 rootAirfoilButton.Text = ofd.SafeFileName;
             }
         }
 
-        private void tipOpenAirButton_Click(object sender, EventArgs e)
+        private void tipselectAfoilButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Title = "Select section tip Airfoil file";
@@ -802,8 +803,9 @@ namespace AVL_Interface
                     return;
 
                 m_surf.Sections[m_currentSection + 1].AirfoilFile = ofd.SafeFileName;
-                rootAirfoilFileLabel.Text = ofd.SafeFileName;
-                rootAirfoilButton.Text = ofd.SafeFileName;
+                m_surf.Sections[m_currentSection+1].UseAirfoilFile = true;
+                tipAirfoilFileLabel.Text = ofd.SafeFileName;
+                tipAirfoilButton.Text = ofd.SafeFileName;
             }
         }
 
